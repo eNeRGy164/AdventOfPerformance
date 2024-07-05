@@ -11,7 +11,7 @@ var config = DefaultConfig.Instance
     .WithSummaryStyle(SummaryStyle.Default)
     .WithOrderer(new DefaultOrderer(SummaryOrderPolicy.SlowestToFastest, MethodOrderPolicy.Declared))
     .AddColumn(StatisticColumn.Median)
-    .HideColumns(Column.StdDev, Column.Error)
+    .HideColumns(Column.StdDev, Column.Error, Column.RatioSD, Column.Mean)
     .AddDiagnoser(MemoryDiagnoser.Default);
 
 BenchmarkSwitcher
