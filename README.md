@@ -11,10 +11,11 @@ Ensure you have the following installed:
 
 For most benchmarks:
 
-- .NET 8.0 SDK
+- .NET 9.0 SDK
 
 For the cross-framework comparison benchmark:
 
+- .NET 9.0 SDK
 - .NET 8.0 SDK
 - .NET 7.0 SDK
 - .NET 6.0 SDK
@@ -35,14 +36,10 @@ cd AdventOfPerformance
 For running with the Native AOT, as I did for my talk, use:
 
 ```bash
-dotnet run -c Release -f net8.0 --framework nativeaot8.0 --filter *
+dotnet run -c Release -f net9.0 -- --runtimes nativeaot90 --filter *
 ```
 
 This takes about 16 minutes on an AMD Ryzen 5 7600.
-
-> [!IMPORTANT]
-> On processors with the `AVX-512F` capability, the current version of [BenchmarkDotNet](https://benchmarkdotnet.org/) (`0.12.3`) may generate invalid code and not work correctly.
-> This issue will be resolved in the next version of BenchmarkDotNet.
 
 #### Without specifying a framework
 
@@ -59,7 +56,7 @@ This takes about 16 minutes on an AMD Ryzen 5 7600.
 To run all the benchmarks, use the following command:
 
 ```bash
-dotnet run -c Release -f net8.0 --framework nativeaot8.0 --filter AdventOfPerformance.Puzzle*
+dotnet run -c Release -f net9.0 -- --runtimes nativeaot90 --filter AdventOfPerformance.Puzzle*
 ```
 
 This takes about 16 minutes on an AMD Ryzen 5 7600.
@@ -67,7 +64,7 @@ This takes about 16 minutes on an AMD Ryzen 5 7600.
 #### Only the framework benchmarks
 
 ```bash
-dotnet run -c Release -f net8.0 --filter AdventOfPerformance.Framework*
+dotnet run -c Release -f net9.0 --filter AdventOfPerformance.Framework*
 ```
 
 This takes about 1.5 minutes on an AMD Ryzen 5 7600.
