@@ -3,6 +3,12 @@
 Welcome to the repository accompanying my conference talk "[A Season for Speed: Turning Puzzles into C# Performance Win](https://sessionize.com/s/michael-hompus/a-season-for-speed-turning-puzzles-into-c-performa/85804)".
 This project showcases my journey of solving [Advent of Code](https://adventofcode.com/) puzzles while learning and applying C# performance optimization techniques.
 
+## Presentation
+
+Get the slides I used at previous presentations.
+
+- [VISUG XL](<https://raw.githubusercontent.com/eNeRGy164/AdventOfPerformance/main/presentations/VisugXL 2024 - A Season for Speed - Turning Puzzles into C%23 Performance Wins.pdf>)
+
 ## Getting started
 
 ### Prerequisites
